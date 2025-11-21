@@ -105,7 +105,7 @@ const GlitchFog: React.FC<GlitchFogProps> = ({
 
     if (Math.random() < probability) {
       // GLITCH STATE
-      const isStrong = Math.random() > 0.8; // Rare strong flash
+      const isStrong = Math.random() > 0.95; // Rare strong flash
       
       // Use flash color or a subtle gray flash
       const c = isStrong ? flashColor : grayColor;
@@ -388,7 +388,7 @@ export const Scene3D: React.FC = () => {
             gl={{ antialias: false, alpha: false }}
         >
           <CameraRig />
-          <GlitchFog baseColor="#050505" glitchColor="#ccff00" probability={0.01} />
+          <GlitchFog baseColor="#050505" glitchColor="#ccff00" probability={0.005} />
           
           <group>
             <Debris count={100} />

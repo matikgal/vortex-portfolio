@@ -4,6 +4,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Manifest', href: '#studio' },
   { label: 'Możliwości', href: '#services' },
   { label: 'Projekty', href: '#work' },
+  { label: 'Zespół', href: '#team' },
   { label: 'Nagrody', href: '#awards' },
   { label: 'Kontakt', href: '#contact' },
 ];
@@ -72,7 +73,7 @@ export const AWARDS = [
 ];
 
 export const TEAM = [
-  { name: "KAI_ZERO", role: "Założyciel / Wizja", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80" },
-  { name: "EVA_CORE", role: "Lead WebGL", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" },
-  { name: "REX_FLUX", role: "Dyr. Kreatywny", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80" }
+  { name: "KAI_ZERO", role: "Założyciel / Wizja", image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=500&q=80" },
+  { name: "EVA_CORE", role: "Lead WebGL", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80" },
+  { name: "REX_FLUX", role: "Dyr. Kreatywny", image: "https://images.unsplash.com/photo-1615109398623-88346a601842?auto=format&fit=crop&w=500&q=80" }
 ];

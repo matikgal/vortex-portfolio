@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { PROJECTS } from '../constants';
 import { ArrowUpRight, Cpu, Code, Scan } from 'lucide-react';
@@ -6,28 +6,37 @@ import { Project } from '../types';
 
 export const Gallery: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"]
   });
 
-  const col1Y = useTransform(scrollYProgress, [0, 1], [0, -300]);
-  const col2Y = useTransform(scrollYProgress, [0, 1], [400, -200]);
+  const col1Y = useTransform(scrollYProgress, [0, 1], [0, isMobile ? -150 : -300]);
+  const col2Y = useTransform(scrollYProgress, [0, 1], [isMobile ? 100 : 400, isMobile ? -100 : -200]);
 
   return (
     <section id="work" className="py-32 px-2 md:px-8 relative z-10 bg-[#050505]" ref={containerRef}>
       
       {/* Vertical floating text background */}
-      <div className="absolute top-0 left-12 h-full hidden md:block overflow-hidden pointer-events-none z-0 opacity-10">
+      <div className="absolute top-0 left-12 h-full hidden md:block overflow-hidden pointer-events-none z-0 opacity-15">
         <motion.div style={{ y: col1Y }} className="text-9xl font-bold text-stroke whitespace-nowrap writing-vertical-rl rotate-180">
           WYBRANE_PRACE WYBRANE_PRACE
         </motion.div>
       </div>
 
       <div className="max-w-8xl mx-auto relative z-10">
-        <div className="mb-32 pl-8 md:pl-32">
-          <h2 className="text-7xl md:text-9xl font-bold text-white mb-4 uppercase">
-            Indeks<br/><span className="text-[#ccff00] ml-20 italic">Projektów</span>
+        <div className="mb-32 pl-4 md:pl-32">
+          <h2 className="text-6xl sm:text-7xl md:text-9xl font-bold text-white mb-4 uppercase">
+            Indeks<br/><span className="text-[#ccff00] ml-10 md:ml-20 italic">Projektów</span>
           </h2>
         </div>
 
@@ -77,7 +86,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
       className="group relative cursor-none hover-trigger perspective-1000"
     >
       {/* Project Number */}
-      <div className="absolute -left-12 top-12 text-[#ccff00] font-mono text-xl z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <div className="absolute -left-4 md:-left-12 top-12 text-[#ccff00] font-mono text-xl z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         (0{index + 1})
       </div>
 
@@ -97,7 +106,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
         {/* Tech Overlay */}
         <div className="absolute bottom-0 left-0 w-full bg-black/90 backdrop-blur-md border-t border-[#ccff00] p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[0.76,0,0.24,1] z-30">
             <div className="flex justify-between items-start mb-4">
-                <h4 className="font-bold text-white uppercase text-lg">Specyfikacja Techniczna</h4>
+                <h4 className="font-bold text-white uppercase text-base md:text-lg">Specyfikacja Techniczna</h4>
                 <Scan className="text-[#ccff00] w-5 h-5 animate-pulse" />
             </div>
             <div className="grid grid-cols-2 gap-4 font-mono text-xs text-[#ccff00]/80">
@@ -123,7 +132,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
           whileHover={{ y: -50 }}
           transition={{ duration: 0.4 }}
         >
-          <h3 className="text-4xl md:text-5xl font-bold uppercase mb-2 group-hover:text-[#ccff00] transition-colors">{project.title}</h3>
+          <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase mb-2 group-hover:text-[#ccff00] transition-colors">{project.title}</h3>
           <p className="text-white/50 font-mono uppercase tracking-widest text-sm">{project.category} // {project.year}</p>
         </motion.div>
         
@@ -133,7 +142,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
            whileHover={{ y: -80 }} // Moves up into view
            transition={{ duration: 0.4 }}
         >
-           <h3 className="text-4xl md:text-5xl font-bold uppercase mb-2 text-transparent text-stroke-heavy">{project.title}</h3>
+           <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase mb-2 text-transparent text-stroke-heavy">{project.title}</h3>
         </motion.div>
       </div>
     </motion.div>

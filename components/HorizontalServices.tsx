@@ -17,19 +17,18 @@ export const HorizontalServices: React.FC = () => {
     target: targetRef,
   });
 
-  // Increased height from 150vh to 500vh to make the scroll much slower and smoother
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", isMobile ? "-85%" : "-50%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", isMobile ? "-78%" : "-55%"]);
 
   return (
-    <section ref={targetRef} id="services" className="relative h-[500vh] bg-[#ccff00]">
+    <section ref={targetRef} id="services" className="relative h-[450vh] md:h-[600vh] bg-[#ccff00]">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-20 pl-20">
+        <motion.div style={{ x }} className="flex gap-8 md:gap-20 pl-8 md:pl-20">
           
           <div className="flex flex-col justify-center min-w-[80vw] md:min-w-[40vw]">
-             <h2 className="text-black text-8xl md:text-[10rem] font-black leading-[0.8] uppercase tracking-tighter">
+             <h2 className="text-black text-7xl sm:text-8xl md:text-[10rem] font-black leading-[0.8] uppercase tracking-tighter">
                 Nasze<br/>Systemy<br/>Główne
              </h2>
-             <p className="mt-8 text-black font-mono text-xl uppercase tracking-widest max-w-md">
+             <p className="mt-8 text-black font-mono text-base md:text-xl uppercase tracking-widest max-w-md">
                 Wdrażanie kreatywności klasy wojskowej do sieci konsumenckiej.
              </p>
           </div>
@@ -44,11 +43,11 @@ export const HorizontalServices: React.FC = () => {
               </div>
               
               <div>
-                <h3 className="text-6xl md:text-8xl font-bold text-black mb-8 uppercase leading-none group-hover:skew-x-6 transition-transform duration-500 origin-left">
+                <h3 className="text-5xl sm:text-6xl md:text-8xl font-bold text-black mb-8 uppercase leading-none group-hover:skew-x-6 transition-transform duration-500 origin-left">
                     {service.title}
                 </h3>
                 <div className="w-full h-[2px] bg-black mb-4" />
-                <p className="text-black font-bold text-2xl md:text-3xl uppercase opacity-80">
+                <p className="text-black font-bold text-xl md:text-2xl uppercase opacity-80">
                     {service.desc}
                 </p>
               </div>
@@ -56,7 +55,7 @@ export const HorizontalServices: React.FC = () => {
           ))}
           
           {/* Spacer at the end */}
-          <div className="min-w-[10vw]" />
+          <div className="min-w-[50vw] md:min-w-[10vw]" />
         </motion.div>
       </div>
     </section>

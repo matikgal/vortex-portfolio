@@ -7,8 +7,8 @@ export const Awards: React.FC = () => {
     <section id="awards" className="py-32 px-4 md:px-12 bg-[#050505] text-white relative z-10">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-24 border-b border-white/20 pb-8">
-            <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter">Uznanie</h2>
-            <p className="font-mono text-[#ccff00] text-xl uppercase tracking-widest mt-4 md:mt-0">Globalne Wyróżnienia</p>
+            <h2 className="text-5xl sm:text-6xl md:text-8xl font-black uppercase tracking-tighter">Uznanie</h2>
+            <p className="font-mono text-[#ccff00] text-lg md:text-xl uppercase tracking-widest mt-4 md:mt-0">Globalne Wyróżnienia</p>
         </div>
 
         <div className="flex flex-col">
@@ -26,11 +26,11 @@ export const Awards: React.FC = () => {
                     
                     <div className="flex items-baseline gap-8 md:gap-16 relative z-10">
                         <span className="font-mono text-white/50 group-hover:text-black/60 transition-colors">{award.year}</span>
-                        <h3 className="text-3xl md:text-5xl font-bold uppercase group-hover:translate-x-4 transition-transform duration-300">{award.org}</h3>
+                        <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold uppercase group-hover:translate-x-4 transition-transform duration-300">{award.org}</h3>
                     </div>
                     
                     <div className="flex items-center gap-4 md:gap-12 mt-4 md:mt-0 relative z-10">
-                         <span className="text-lg md:text-2xl font-light uppercase tracking-wide text-white/80 group-hover:text-black transition-colors">{award.title}</span>
+                         <span className="text-base sm:text-lg md:text-2xl font-light uppercase tracking-wide text-white/80 group-hover:text-black transition-colors">{award.title}</span>
                          <span className="hidden md:inline-block w-20 h-[1px] bg-white/30 group-hover:bg-black/30 transition-colors" />
                          <span className="font-mono text-sm text-[#ccff00] group-hover:text-black border border-[#ccff00] group-hover:border-black px-2 py-1 rounded-full transition-colors">{award.project}</span>
                     </div>

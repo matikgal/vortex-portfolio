@@ -53,10 +53,10 @@ export const Navigation: React.FC = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, delay: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-40 flex justify-between items-start px-8 py-8 mix-blend-difference"
+      className="fixed top-0 left-0 right-0 z-40 flex flex-col items-center md:flex-row md:justify-between md:items-start px-4 md:px-8 py-6 md:py-8 mix-blend-difference"
     >
-      <div className="flex flex-col">
-        <div className="text-3xl font-black tracking-tighter font-syne text-white leading-none cursor-default">
+      <div className="flex flex-col items-center md:items-start">
+        <div className="text-2xl md:text-3xl font-black tracking-tighter font-syne text-white leading-none cursor-default">
           VORTEX
         </div>
         <div className="text-[10px] font-mono tracking-widest text-[#ccff00] mt-1">
@@ -64,7 +64,7 @@ export const Navigation: React.FC = () => {
         </div>
       </div>
 
-      <ul className="flex flex-col gap-2 text-right">
+      <ul className="flex flex-row flex-wrap justify-center gap-x-6 gap-y-2 mt-6 md:mt-0 md:flex-col md:items-end md:gap-2">
         {NAV_ITEMS.map((item, i) => {
           const isActive = activeSection === item.href;
           
@@ -78,7 +78,7 @@ export const Navigation: React.FC = () => {
                   <a
                   href={item.href}
                   onClick={(e) => handleScrollClick(e, item.href)}
-                  className={`text-sm font-bold uppercase tracking-widest transition-all duration-300 group relative flex items-center justify-end gap-2 ${isActive ? 'text-[#ccff00]' : 'text-white hover:text-[#ccff00]'}`}
+                  className={`text-xs md:text-sm font-bold uppercase tracking-widest transition-all duration-300 group relative flex items-center justify-end gap-2 ${isActive ? 'text-[#ccff00]' : 'text-white hover:text-[#ccff00]'}`}
                   >
                   {/* Active Indicator Line */}
                   <span className={`h-[1px] bg-[#ccff00] transition-all duration-300 ${isActive ? 'w-8' : 'w-0 group-hover:w-4'}`}></span>

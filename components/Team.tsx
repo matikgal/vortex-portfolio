@@ -1,23 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { TEAM } from '../constants';
 
 export const Team: React.FC = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+  
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
   return (
-    <section className="py-32 px-4 md:px-12 bg-[#050505] border-y border-white/10 overflow-hidden">
+    <section id="team" className="py-32 px-4 md:px-12 bg-[#050505] border-y border-white/10 overflow-hidden">
       <div className="max-w-8xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
             
             {/* Heading Area */}
-            <div className="md:col-span-4 flex flex-col justify-center sticky top-32 h-fit">
-                <h2 className="text-7xl font-black uppercase mb-8 leading-none">
+            <div className="md:col-span-4 flex flex-col justify-center md:sticky top-32 h-fit">
+                <h2 className="text-6xl md:text-7xl font-black uppercase mb-8 leading-none">
                     Nasz<br/>
                     <span className="text-transparent text-stroke-heavy">Zespół</span>
                 </h2>
-                <p className="text-xl text-white/60 uppercase font-mono max-w-xs">
+                <p className="text-base md:text-xl text-white/60 uppercase font-mono max-w-xs">
                     Ludzie łączący się z maszynami, by tworzyć niemożliwe.
                 </p>
                 
@@ -31,7 +40,7 @@ export const Team: React.FC = () => {
                 {TEAM.map((member, i) => (
                     <motion.div 
                         key={i}
-                        style={{ y: i % 2 === 0 ? 0 : y }}
+                        style={{ y: i % 2 === 0 || isMobile ? 0 : y }}
                         className={`relative ${i === 1 ? 'md:mt-32' : ''}`}
                     >
                         <div className="relative aspect-[4/5] overflow-hidden grayscale hover:grayscale-0 transition-all duration-500 mb-4 group">
@@ -43,7 +52,7 @@ export const Team: React.FC = () => {
                             <div className="absolute inset-0 bg-[#ccff00] mix-blend-overlay opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
                         </div>
                         
-                        <h3 className="text-4xl font-bold uppercase">{member.name}</h3>
+                        <h3 className="text-3xl md:text-4xl font-bold uppercase">{member.name}</h3>
                         <p className="font-mono text-[#ccff00] text-sm tracking-widest uppercase">{member.role}</p>
                     </motion.div>
                 ))}

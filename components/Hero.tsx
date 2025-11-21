@@ -23,7 +23,7 @@ export const Hero: React.FC = () => {
             initial={{ x: -200, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="text-[18vw] leading-[0.8] font-black mix-blend-difference text-white relative z-20"
+            className="text-[22vw] sm:text-[20vw] md:text-[18vw] leading-[0.8] font-black mix-blend-difference text-white relative z-20"
             style={{ x: y1 }}
           >
             CYFROWY
@@ -33,7 +33,7 @@ export const Hero: React.FC = () => {
             initial={{ x: 200, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="text-[18vw] leading-[0.8] font-black text-[#ccff00] relative z-10 -mt-[4vw] ml-[10vw] acid-glow"
+            className="text-[22vw] sm:text-[20vw] md:text-[18vw] leading-[0.8] font-black text-[#ccff00] relative z-10 -mt-[6vw] sm:-mt-[4vw] ml-[5vw] sm:ml-[10vw] acid-glow"
             style={{ x: y2 }}
           >
             CHAOS
@@ -46,8 +46,8 @@ export const Hero: React.FC = () => {
               className="absolute top-[10%] right-[10%] md:right-[20%] w-32 h-32 md:w-64 md:h-64 bg-white rounded-full mix-blend-exclusion flex items-center justify-center z-30"
               style={{ rotate }}
            >
-              <p className="text-black font-bold text-xl md:text-2xl text-center rotate-[-15deg]">
-                PRZEWIŃ<br/>ABY<br/>ZNISZCZYĆ
+              <p className="text-black font-bold text-lg sm:text-xl md:text-2xl text-center rotate-[-15deg]">
+                ODKRYJ<br/>WIĘCEJ
               </p>
            </motion.div>
         </div>

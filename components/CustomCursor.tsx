@@ -37,7 +37,7 @@ export const CustomCursor: React.FC = () => {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 w-4 h-4 bg-[#ccff00] rounded-none pointer-events-none z-[60] mix-blend-exclusion"
+        className="fixed top-0 left-0 w-4 h-4 bg-[#ccff00] rounded-none pointer-events-none z-[60] mix-blend-exclusion custom-cursor-element"
         style={{
           x: cursorXSpring,
           y: cursorYSpring,
@@ -50,7 +50,7 @@ export const CustomCursor: React.FC = () => {
         }}
       />
       <motion.div 
-         className="fixed top-0 left-0 w-12 h-12 border border-[#ccff00] pointer-events-none z-[59] mix-blend-exclusion"
+         className="fixed top-0 left-0 w-12 h-12 border border-[#ccff00] pointer-events-none z-[59] mix-blend-exclusion custom-cursor-element"
          style={{
             x: cursorXSpring,
             y: cursorYSpring,

@@ -31,7 +31,7 @@ export const Marquee: React.FC<MarqueeProps> = ({ text, direction = 'left', clas
         {[...Array(4)].map((_, i) => (
            <span 
             key={i} 
-            className={`text-8xl md:text-[10rem] font-black uppercase font-Anton leading-none ${
+            className={`text-7xl sm:text-8xl md:text-[10rem] font-black uppercase font-Anton leading-none ${
               filled 
                 ? 'text-current opacity-100' 
                 : 'text-stroke opacity-20'
@@ -55,7 +55,7 @@ export const Marquee: React.FC<MarqueeProps> = ({ text, direction = 'left', clas
         {[...Array(4)].map((_, i) => (
            <span 
             key={`clone-${i}`} 
-            className={`text-8xl md:text-[10rem] font-black uppercase font-Anton leading-none ${
+            className={`text-7xl sm:text-8xl md:text-[10rem] font-black uppercase font-Anton leading-none ${
               filled 
                 ? 'text-current opacity-100' 
                 : 'text-stroke opacity-20'

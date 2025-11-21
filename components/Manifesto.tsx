@@ -24,7 +24,7 @@ export const Manifesto: React.FC = () => {
         style={{ scale, rotate }}
         className="max-w-7xl mx-auto text-center relative z-10"
       >
-        <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 md:gap-x-8 md:gap-y-4 leading-none">
+        <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 md:gap-x-8 md:gap-y-4 leading-none">
           {words.map((word, i) => (
             <motion.span
               key={i}
@@ -36,7 +36,7 @@ export const Manifesto: React.FC = () => {
                 ease: [0.2, 0.65, 0.3, 0.9],
               }}
               viewport={{ once: true, margin: "-10%" }}
-              className={`text-5xl md:text-8xl lg:text-9xl font-black uppercase ${
+              className={`text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-black uppercase ${
                 ['chaos.', 'gwałtowne.', 'odczuwane.'].includes(word.toLowerCase()) 
                   ? 'text-[#ccff00] acid-glow' 
                   : 'text-white'
