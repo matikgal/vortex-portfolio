@@ -1,20 +1,19 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# VORTEX - Awwwards Style Interactive Showcase
 
-# Run and deploy your AI Studio app
+## Opis Projektu
 
-This contains everything you need to run your app locally.
+VORTEX to w pełni interaktywna strona typu "Awwwards", stworzona jako pokaz zaawansowanych możliwości współczesnego frontendu. Projekt łączy w sobie estetykę brutalizmu i acid design z najnowszymi technologiami webowymi, takimi jak WebGL, aby dostarczyć użytkownikowi unikalne, immersyjne doświadczenie.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1D1p-dHimkgYmTKhUfdCSwSISpaL3fPtX
+Jest to projekt portfolio, który demonstruje umiejętności w zakresie kreatywnego developmentu, animacji 3D, projektowania interakcji oraz tworzenia złożonych, ale wydajnych interfejsów użytkownika.
 
-## Run Locally
+## Użyte Technologie
 
-**Prerequisites:**  Node.js
+Poniżej znajduje się lista kluczowych technologii i bibliotek wykorzystanych w projekcie:
 
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+*   **Framework:** React
+*   **Język:** TypeScript
+*   **Grafika 3D:** Three.js (@react-three/fiber, @react-three/drei)
+*   **Animacje:** Framer Motion
+*   **Styling:** Tailwind CSS
+*   **Płynne Przewijanie:** Lenis
+*   **Ikony:** Lucide React

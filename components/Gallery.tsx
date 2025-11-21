@@ -26,13 +26,6 @@ export const Gallery: React.FC = () => {
   return (
     <section id="work" className="py-32 px-2 md:px-8 relative z-10 bg-[#050505]" ref={containerRef}>
       
-      {/* Vertical floating text background */}
-      <div className="absolute top-0 left-12 h-full hidden md:block overflow-hidden pointer-events-none z-0 opacity-15">
-        <motion.div style={{ y: col1Y }} className="text-9xl font-bold text-stroke whitespace-nowrap writing-vertical-rl rotate-180">
-          WYBRANE_PRACE WYBRANE_PRACE
-        </motion.div>
-      </div>
-
       <div className="max-w-8xl mx-auto relative z-10">
         <div className="mb-32 pl-4 md:pl-32">
           <h2 className="text-6xl sm:text-7xl md:text-9xl font-bold text-white mb-4 uppercase">
@@ -86,7 +79,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
       className="group relative cursor-none hover-trigger perspective-1000"
     >
       {/* Project Number */}
-      <div className="absolute -left-4 md:-left-12 top-12 text-[#ccff00] font-mono text-xl z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <div className="absolute left-2 md:-left-12 top-12 text-[#ccff00] font-mono text-xl z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         (0{index + 1})
       </div>
 
