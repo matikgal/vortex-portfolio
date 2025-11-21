@@ -41,9 +41,9 @@ export const Team: React.FC = () => {
                     <motion.div 
                         key={i}
                         style={{ y: i % 2 === 0 || isMobile ? 0 : y }}
-                        className={`relative ${i === 1 ? 'md:mt-32' : ''}`}
+                        className={`relative group ${i === 1 ? 'md:mt-32' : ''}`}
                     >
-                        <div className="relative aspect-[4/5] overflow-hidden grayscale hover:grayscale-0 transition-all duration-500 mb-4 group">
+                        <div className="relative aspect-[4/5] overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500 mb-4">
                             <img 
                                 src={member.image} 
                                 alt={member.name} 
@@ -52,8 +52,9 @@ export const Team: React.FC = () => {
                             <div className="absolute inset-0 bg-[#ccff00] mix-blend-overlay opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
                         </div>
                         
-                        <h3 className="text-3xl md:text-4xl font-bold uppercase">{member.name}</h3>
+                        <h3 className="text-3xl md:text-4xl font-bold uppercase transition-colors duration-300 group-hover:text-[#ccff00]">{member.name}</h3>
                         <p className="font-mono text-[#ccff00] text-sm tracking-widest uppercase">{member.role}</p>
+                        <div className="w-0 h-[2px] bg-[#ccff00] mt-2 group-hover:w-1/2 transition-all duration-500 ease-out"></div>
                     </motion.div>
                 ))}
                 
