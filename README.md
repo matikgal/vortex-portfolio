@@ -65,6 +65,6 @@ npm run preview
 
 ## Autor
 
-- **Mateusz Gałka**
+- **Mateusz Gałuszka**
 - **GitHub** - [matikgal](https://github.com/matikgal)
 - **Projekt** - [vortex-portfolio](https://github.com/matikgal/vortex-portfolio)
