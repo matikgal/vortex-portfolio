@@ -1,22 +1,49 @@
-# VORTEX - Awwwards Style Interactive Showcase
+# VORTEX Portfolio
 
-## Opis Projektu
+## Krótki Opis
 
-VORTEX to w pełni interaktywna strona typu "Awwwards", stworzona jako pokaz zaawansowanych możliwości współczesnego frontendu. Projekt łączy w sobie estetykę brutalizmu i acid design z najnowszymi technologiami webowymi, takimi jak WebGL, aby dostarczyć użytkownikowi unikalne, immersyjne doświadczenie.
+VORTEX to interaktywna strona portfolio w stylu Awwwards, łącząca estetykę cyfrowego brutalizmu z zaawansowanymi technologiami webowymi. Projekt demonstruje umiejętności w zakresie kreatywnego developmentu, animacji 3D oraz projektowania immersyjnych interfejsów użytkownika.
 
-Jest to projekt portfolio, który demonstruje umiejętności w zakresie kreatywnego developmentu, animacji 3D, projektowania interakcji oraz tworzenia złożonych, ale wydajnych interfejsów użytkownika.
+---
 
-## Użyte Technologie
+## Kluczowe Funkcje
 
-Poniżej znajduje się lista kluczowych technologii i bibliotek wykorzystanych w projekcie:
+- Interaktywna scena 3D z wykorzystaniem WebGL i Three.js
+- Płynne animacje i przejścia oparte na Framer Motion
+- Responsywny design dostosowany do urządzeń mobilnych i desktopowych
+- Sekcja z poziomym scrollowaniem prezentująca usługi
+- Dynamiczna nawigacja z efektem mix-blend-difference
+- Optymalizacja wydajności i szybkie ładowanie zasobów
 
-- **Framework:** React
-- **Język:** TypeScript
-- **Grafika 3D:** Three.js (@react-three/fiber, @react-three/drei)
-- **Animacje:** Framer Motion
-- **Styling:** Tailwind CSS
-- **Płynne Przewijanie:** Lenis
-- **Ikony:** Lucide React
+---
+
+## Technologie i Narzędzia
+
+Projekt został stworzony przy użyciu następujących kluczowych technologii:
+
+### Frontend
+
+- **React** - Biblioteka do budowy interfejsu użytkownika
+- **TypeScript** - Typowany JavaScript dla lepszej jakości kodu
+- **Three.js** - Biblioteka do grafiki 3D (react-three/fiber, react-three/drei)
+- **Framer Motion** - Zaawansowane animacje i przejścia
+- **Tailwind CSS** - Utility-first framework do stylizacji
+- **Lenis** - Płynne przewijanie strony
+
+### Narzędzia Deweloperskie
+
+- **Vite** - Szybki bundler i dev server
+- **GitHub Actions** - Automatyczny deployment na GitHub Pages
+
+---
+
+## Zobacz Projekt
+
+Strona jest dostępna i hostowana publicznie pod adresem:
+
+https://matikgal.github.io/vortex-portfolio/
+
+---
 
 ## Instalacja i Uruchomienie
 
@@ -34,52 +61,10 @@ npm run build
 npm run preview
 ```
 
-## Deployment na GitHub Pages
+---
 
-### Automatyczny deployment (zalecany)
+## Autor
 
-Projekt jest skonfigurowany do automatycznego deploymentu na GitHub Pages przy każdym pushu do brancha `main`.
-
-**Kroki:**
-
-1. Upewnij się, że masz repozytorium na GitHubie
-2. W ustawieniach repozytorium przejdź do **Settings → Pages**
-3. W sekcji **Source** wybierz **GitHub Actions**
-4. Wypchnij kod na branch `main`:
-   ```bash
-   git add .
-   git commit -m "Setup GitHub Pages deployment"
-   git push origin main
-   ```
-5. GitHub Actions automatycznie zbuduje i wdroży stronę
-6. Strona będzie dostępna pod: `https://matikgal.github.io/vortex-portfolio/`
-
-### Manualny deployment
-
-Możesz też wdrożyć stronę ręcznie:
-
-```bash
-npm run deploy
-```
-
-## Struktura Projektu
-
-```
-vortex/
-├── components/          # Komponenty React
-│   ├── Scene3D.tsx     # Scena WebGL
-│   ├── Hero.tsx        # Sekcja hero
-│   ├── Navigation.tsx  # Nawigacja
-│   └── ...
-├── .github/
-│   └── workflows/
-│       └── deploy.yml  # GitHub Actions workflow
-├── index.html          # Główny plik HTML
-├── index.tsx           # Entry point aplikacji
-├── App.tsx             # Główny komponent
-└── vite.config.ts      # Konfiguracja Vite
-```
-
-## Licencja
-
-Projekt stworzony jako portfolio showcase.
+- **Mateusz Gałka**
+- **GitHub** - [matikgal](https://github.com/matikgal)
+- **Projekt** - [vortex-portfolio](https://github.com/matikgal/vortex-portfolio)
