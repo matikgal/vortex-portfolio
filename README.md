@@ -1,70 +1,34 @@
-# VORTEX Portfolio
+# Vortex
 
-## Krótki Opis
+Nowoczesna strona portfolio dla Frontend Developera, utrzymana w stylistyce Digital Brutalism. Aplikacja wyróżnia się unikalnym designem, elementami 3D oraz płynnymi animacjami, zbudowana z naciskiem na wydajność i estetykę.
 
-VORTEX to interaktywna strona portfolio w stylu Awwwards, łącząca estetykę cyfrowego brutalizmu z zaawansowanymi technologiami webowymi. Projekt demonstruje umiejętności w zakresie kreatywnego developmentu, animacji 3D oraz projektowania immersyjnych interfejsów użytkownika.
+## Demo
 
----
+Zobacz aplikację na żywo: <a href="https://matikgal.github.io/vortex-portfolio/" target="_blank">Link</a>
 
-## Kluczowe Funkcje
+## O projekcie
 
-- Interaktywna scena 3D z wykorzystaniem WebGL i Three.js
-- Płynne animacje i przejścia oparte na Framer Motion
-- Responsywny design dostosowany do urządzeń mobilnych i desktopowych
-- Sekcja z poziomym scrollowaniem prezentująca usługi
-- Dynamiczna nawigacja z efektem mix-blend-difference
-- Optymalizacja wydajności i szybkie ładowanie zasobów
+Projekt "Vortex" powstał jako eksperymentalna wizytówka moich umiejętności programistycznych oraz estetycznego zmysłu. Głównym celem było stworzenie immersyjnego interfejsu wykorzystującego bibliotekę Three.js oraz React Three Fiber do generowania scen 3D w czasie rzeczywistym. Aplikacja łączy surowy styl z zaawansowanymi mikro-interakcjami, niestandardowym kursorem i płynnym przewijaniem, tworząc wciągające doświadczenie użytkownika.
 
----
+## Technologie
 
-## Technologie i Narzędzia
+- **Frontend:** ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+- **3D & Animacje:** ![Three.js](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white) ![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer&logoColor=blue)
+- **Inne:** ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![Lenis](https://img.shields.io/badge/Lenis-black?style=for-the-badge)
 
-Projekt został stworzony przy użyciu następujących kluczowych technologii:
+## Główne funkcjonalności
 
-### Frontend
+- Interaktywna scena 3D z wykorzystaniem React Three Fiber i Drei
+- Płynne przewijanie (Smooth Scrolling) przy użyciu Lenis
+- Niestandardowy kursor (Custom Cursor) reagujący na elementy interfejsu
+- Zaawansowane animacje wejścia i mikro-interakcje (Framer Motion)
+- Responsywny design (Mobile First) z ukrywaniem nawigacji przy przewijaniu
+- Efekty post-processingu (Noise Overlay) i stylistyka Brutalizmu
+- Dynamiczna zmiana kolorystyki nawigacji w zależności od sekcji (Scroll Spy)
+- Komponenty UI: Marquee, Gallery, Manifesto
 
-- **React** - Biblioteka do budowy interfejsu użytkownika
-- **TypeScript** - Typowany JavaScript dla lepszej jakości kodu
-- **Three.js** - Biblioteka do grafiki 3D (react-three/fiber, react-three/drei)
-- **Framer Motion** - Zaawansowane animacje i przejścia
-- **Tailwind CSS** - Utility-first framework do stylizacji
-- **Lenis** - Płynne przewijanie strony
+## Kontakt
 
-### Narzędzia Deweloperskie
-
-- **Vite** - Szybki bundler i dev server
-- **GitHub Actions** - Automatyczny deployment na GitHub Pages
-
----
-
-## Zobacz Projekt
-
-Strona jest dostępna i hostowana publicznie pod adresem:
-
-https://matikgal.github.io/vortex-portfolio/
-
----
-
-## Instalacja i Uruchomienie
-
-```bash
-# Instalacja zależności
-npm install
-
-# Uruchomienie w trybie deweloperskim
-npm run dev
-
-# Build produkcyjny
-npm run build
-
-# Podgląd buildu
-npm run preview
-```
-
----
-
-## Autor
-
-- **Mateusz Gałuszka**
-- **GitHub** - [matikgal](https://github.com/matikgal)
-- **Projekt** - [vortex-portfolio](https://github.com/matikgal/vortex-portfolio)
+Email: mateusz.galuszka21@gmail.com
+<br>
+_Stworzone przez Mateusz Gałuszka_
